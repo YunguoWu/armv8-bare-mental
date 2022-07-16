@@ -33,7 +33,7 @@ uint32_t get_current_el(void)
 	A, bit [8]: SError (System Error) mask bit.
 	I, bit [7]: IRQ mask bit.
 	F, bit [6]: FIQ mask bit.
-	value: 
+	value:
 		0 Exception not masked.
 		1 Exception masked.
 */
@@ -107,7 +107,7 @@ void raw_write_spsr_el1(uint32_t spsr_el1)
 }
 
 
-/* 
+/*
 ISR_EL1, Interrupt Status Register
 	Shows whether an IRQ, FIQ, or SError interrupt is pending.
 */
@@ -119,9 +119,9 @@ uint32_t raw_read_isr_el1(void)
 	return isr_el1;
 }
 
-/* 
+/*
 RVBAR_EL1, Reset Vector Base Address Register (if EL2 and EL3 not implemented)
-	If EL1 is the highest exception level implemented, contains the 
+	If EL1 is the highest exception level implemented, contains the
 	IMPLEMENTATION DEFINED address that execution starts from after reset when
 	executing in AArch64 state.
 */
